@@ -1,0 +1,259 @@
+\documentclass[eprint]{actapoly}
+
+\begin{document}
+
+\title[Implementation of the INSPIRE Theme Buildings]
+{Analysis and Implementation of Application Schemas for the INSPIRE Theme Buildings}
+
+%\correspondingauthor[M. Med]{michal Med}{my}{my@mail.com}
+\correspondingauthor[M. Med]{Michal Med}{my}{michal.med@fsv.cvut.cz}
+
+\institution{my}{Faculty of Civil Engineering, Czech Technical University in Prague, Thakurova 2077/7, Prague, Czech Republic}
+%\institution{their}{Their institution, Their Road 1, Their Town, Their Country}
+
+\begin{abstract}
+During Implementation of INSPIRE directive, various data themes are transformed one by one into structure and content given by Data Specifications published by Joint Research Center (JRC) of the European Commission. Data shall be then published in the GML 3.2.1 format, that is standard of Open Geospatial Consortium (OGC). Structure and validity of data are ensured by validation against XSD schemas. These schemas are usually provided by JRC as well, but not neccessarily for all application schemas of all INSPIRE themes. 
+
+Currently implemented theme Buildings has defined six application schemas, but XSD schemas are available for only three of them. All application schemas were analysed and it was found, that the most suitable data model responds most closely to the application schema BuildingsExtended2D. Its XSD schema was not provided by JRC in the current version. Moreover, abstract XSD schema BuildingsExtendedBase, needed for usage of previous schemas, neither. There appeared a need of creation of these missing XSD schemas.
+
+Besides suitable application schema, analysis showed data sources needed for implementation, presumed links to features of other INSPIRE themes, default portrayal and ways of data publication. During implementation, data were transformed from original databases into tables in publication database, then it was shaped into INSPIRE data structure given by Data Specification and published in GML format, valid against newly created XSD schemas.
+\end{abstract}
+
+\keywords{INSPIRE, Buildings, XSD schema, GML format, web service}
+
+\maketitle
+
+
+
+
+\section{Introduction to INSPIRE}
+Infrastructure for Spatial Information in Europe (INSPIRE) is the directive of European Commission and Council, which was created to standardise spatial information in member countries of EU and enable the sharing of information among public sector organisations. Its implementation has begun on 15th May 2007 by coming directive into force. It is planned to be implemented at various stages, with full implementation required by 2019. In the Czech Republic it was transposed into legislation by the amendment to the Act no. 123/1998 Coll., on the right to access information about environment, which came into force on 23th October 2009. 
+
+Implementation of INSPIRE is in Czech Republic coordinated by Czech information agency of environment (CENIA). On 4th November 2010 was found Coordinating Comitee for INSPIRE (KOVIN) as an advisory body of the Ministry of environment. Its tasks are the implementation of INSPIRE, evaluating progress in promoting the implementation of INSPIRE, analysis of results of the implementation and coordination of data providers. This is done through technical working groups focused on partial implementation steps, such as metadata, services, strategy, legislation i.e.
+\cite{KOVIN - http://inspire.gov.cz/kovin}
+
+Since the beginning of 2014, the implementation is documented and directed by the national strategy of the implementation of INSPIRE \cite{strategie - http://inspire.gov.cz/sites/default/files/documents/Strategie ImplementaceINSPIRE.pdf}. Main target of the implementaion according to the strategy is creation, maintenance and developing of the infrastructure of spatial information in the Czech Republic as a part of European infrastructure.
+
+Directive devides spatial data into themes. Each theme is described by Data Specification document published by Joint Research Center (JRC). Implementation is set on the level of countries. Every theme has national coordinator, that is usually an organisation administering the data. Coordinator is responsible for proper implmentation. Each theme can have more participators, but only one coordinator. At the time of writing this paper there is more than eight themes already implemented in the Czech Republic. All of the themes are coordinated either by Czech Office for Surveying, Mapping and Cadastre (CUZK), or Land Survey Office (ZU). Some other themes have their coordinator as well, but were not implemented yet.
+
+\section{Analysis of the INSPIRE theme Buildings}
+
+
+
+
+\begin{table*}
+\centering
+\begin{tabular}{ll}
+\toprule
+\bfseries The first column of this very wide table & \bfseries The second column of this very wide table
+\\\Midrule
+Foo & Bar
+\\\midrule
+Bar & Baz
+\\\bottomrule
+\end{tabular}
+\caption{Wide table.}
+\label{tab:wide}
+\end{table*}
+
+
+
+
+\begin{figure*}
+\centering
+%\includegraphics[width=0.8\linewidth]{fig_a} % <-- use this for your graphics
+\rule{10cm}{5cm} % <-- this is just a black box substitute for graphics
+\caption{Wide figure~\cite{TeXbook:D,booktabs}.}
+\label{fig:gr_a}
+\end{figure*}
+
+
+
+
+In this section, we show that
+\begin{align}
+	300 &= 1+2+3+4+5+6+7+8+9+10
+\nonumber\\
+	& +11+12+13+14+15+16+17
+\nonumber\\
+	& +18+19+20+21+22+23+24,
+\end{align}
+which can be written as
+\begin{multline}
+	300 = 1+2+3+4+5+6+7+8+9
+\\
+	+10+11+12+13+14+15+16+17
+\\
+	+18+19+20+21+22+23+24.
+\end{multline}
+
+More details can be found in Section~\ref{sect:Pha}.
+Ut quis lorem nisi.
+Maecenas blandit pharetra odio vitae facilisis.
+Suspendisse egestas porta ligula non blandit.
+Morbi posuere leo scelerisque nunc tempor dignissim.
+Vivamus tristique sagittis faucibus.
+Nullam placerat, dolor ut rhoncus pellentesque, nisl neque aliquam sem, ut aliquam enim est vel risus.
+Maecenas congue molestie sem in consectetur.
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+ Mauris enim massa, lobortis sit amet convallis id, sollicitudin a neque.
+Aliquam erat volutpat.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Aenean hendrerit dictum lectus, vel dictum lacus iaculis non.
+Nullam ornare, arcu vehicula tempor hendrerit, dui neque consectetur eros, vitae adipiscing ipsum metus a enim.
+Nullam risus erat, eleifend ut volutpat at, varius quis eros.
+Integer magna nisl, sodales a auctor mollis, luctus accumsan dolor.
+
+
+
+
+\subsection{Etiam porta venenatis laoreet}
+
+
+
+
+Aenean leo lectus, vulputate non gravida at, rhoncus vel ante.
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+ Duis nec libero magna.
+Praesent ut interdum purus.
+Fusce auctor dolor id ligula congue sed tempor lectus pharetra.
+Etiam tellus leo, vestibulum at venenatis et, condimentum vel dui.
+In felis nulla, bibendum eget blandit nec, scelerisque eu arcu.
+Etiam nisi nisl, pellentesque sed aliquet sit amet, ullamcorper accumsan nulla.
+Nam lobortis nulla at enim iaculis sed condimentum justo vulputate.
+Donec cursus, velit at congue vehicula, enim erat faucibus elit, sed porttitor erat sem id odio.
+
+
+
+
+
+\subsection{Donec elementum magna in lacus auctor eget convallis nunc laoreet}
+
+Aliquam scelerisque leo sit amet ipsum interdum eu tempus tellus facilisis.
+\begin{enumerate}
+
+\item
+Quisque sollicitudin luctus nisl, eget lacinia orci ullamcorper vitae.
+Donec volutpat ante sed purus sodales quis vulputate ante pretium.
+In congue, metus placerat scelerisque lacinia, ante erat eleifend eros, id malesuada libero dolor et magna.
+Phasellus quis est nec justo tempor faucibus eu ac massa.
+Ut ut elit elit, et ullamcorper nulla.
+
+\item
+Sed luctus, turpis at consectetur tristique, felis nunc dapibus lectus, non pellentesque dui sapien vulputate urna.
+Phasellus quis justo enim.
+Donec in nisi sit amet elit hendrerit sollicitudin id ut mi.
+Nunc elit sapien, ultricies vitae placerat volutpat, fringilla sit amet dolor.
+Curabitur posuere dolor id erat vulputate sit amet aliquet sem pellentesque.
+
+Nam lectus quam, tincidunt sed tincidunt sed, venenatis quis felis.
+Vestibulum aliquet ullamcorper sem eget porttitor.
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+ Integer sagittis ligula ut orci iaculis ultrices.
+
+\item
+Nunc facilisis posuere erat, nec dictum erat luctus quis.
+Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+Cras a enim neque:
+ \begin{itemize}
+ \item Vivamus est urna, consequat sed dapibus fringilla, semper facilisis tellus.
+ Quisque suscipit facilisis ante eu venenatis.
+ \item Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+ Sed laoreet, lorem facilisis pharetra accumsan, sem mi dictum orci, ac vulputate augue risus eu felis.
+ Donec feugiat condimentum ultricies.
+ \end{itemize}
+
+\item
+Donec in nisi eu risus sagittis sollicitudin sed sit amet magna.
+Maecenas in leo mauris, id commodo quam.
+Donec tristique arcu ut dolor posuere varius.
+Mauris molestie ante sed ipsum pulvinar nec vehicula turpis fringilla.
+
+\end{enumerate}
+Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+Vivamus magna libero, mattis id faucibus vitae, volutpat hendrerit ante.
+Fusce gravida mattis accumsan.
+
+Sed rhoncus ullamcorper nibh, eget pretium arcu iaculis nec.
+Nulla facilisi.
+Cras varius augue non nulla hendrerit vestibulum non quis quam.
+
+
+
+
+
+\section{Phasellus ac elit enim}
+\label{sect:Pha}
+
+
+
+
+Ut in vulputate dolor.
+Vestibulum suscipit leo in ligula pulvinar semper.
+Sed et orci ipsum, ac sodales sapien.
+Maecenas a dui vel risus aliquet interdum.
+Donec pharetra neque quis nulla feugiat mattis vitae ultricies mauris.
+Praesent nisi justo, venenatis sed fermentum quis, volutpat sit amet arcu.
+Donec id sapien ac metus dignissim porttitor.
+Integer congue tristique nisi ac posuere.
+
+Table~\ref{tab:wide} and Figure~\ref{fig:gr_a} show that integer faucibus lobortis varius.
+Nullam sed quam eget metus tempor eleifend.
+Vivamus at malesuada ligula.
+Sed a odio massa, at adipiscing nisi.
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+Nullam eros metus, ornare vel semper in, congue nec lorem.
+Maecenas dictum, magna at ornare suscipit, lacus tellus eleifend felis, nec porta enim mauris egestas mi.
+Sed eu iaculis nibh.
+Nullam arcu dolor, egestas eu posuere sit amet, dignissim et libero.
+
+
+
+
+\section{Conclusions}
+
+
+
+
+\begin{figure}
+\centering
+%\includegraphics[width=\linewidth]{graph_a} % <-- use this for your graphics
+\rule{5cm}{5cm} % <-- this is just a black box substitute for graphics
+\\[3mm]
+%\includegraphics[width=\linewidth]{graph_b} % <-- use this for your graphics
+\rule{5cm}{5cm} % <-- this is just a black box substitute for graphics
+\caption{Our results: black box (top) and black box (bottom).}
+\label{fig:res}
+\end{figure}
+
+
+
+Nulla volutpat aliquet augue laoreet accumsan.
+Duis velit nisl, ultrices ac sagittis a, ultricies et elit.
+In feugiat, dui sed pellentesque posuere, turpis elit pulvinar elit, in luctus diam tellus non elit.
+Nullam id enim id metus interdum volutpat id vitae ipsum.
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+ Vestibulum placerat, massa ut gravida interdum, augue lacus gravida orci, vel rhoncus nibh eros a nisi.
+Nullam ultricies nisi odio, quis malesuada neque, as you can see in Figure~\ref{fig:res}~\cite{doi}.
+
+
+
+\begin{nomenclature}
+\item[kg\,m^-3]{\varrho}{Liquid density}
+\item[Pa]{p}{Liquid pressure}
+\medskip
+\item{\mathit{Re}}{Reynold's number}
+\end{nomenclature}
+
+
+
+\begin{acknowledgements}
+G.~Surname was supported by grant 1234567890.
+\end{acknowledgements}
+
+
+
+\bibliographystyle{actapoly}
+\bibliography{biblio}
+
+\end{document}
