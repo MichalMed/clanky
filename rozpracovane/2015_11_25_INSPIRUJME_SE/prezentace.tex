@@ -1,0 +1,97 @@
+\documentclass[12pt,landscape]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[czech]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphics}
+\usepackage{listings}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{tikz}
+\usetheme{Luebeck}
+\usecolortheme{seahorse}
+%\usecolortheme{lily}
+
+%\definecolor{lightsteel}{RGB}{202,225,255}
+\definecolor{SectionBox}{RGB}{60,160,0}
+
+\setbeamertemplate{section in head/foot}{\textcolor{black}{\hfill\textbf{\insertsectionhead}}}
+\setbeamertemplate{section in head/foot shaded}{\textcolor{gray}{\hfill\insertsectionhead}}
+
+\setbeamercolor{frametitle}{bg=white}
+\setbeamercolor{subsection in head/foot}{bg=white}
+%\setbeamercolor{subsection in head/foot}{bg=lightsteel}
+%\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{footline}
+{
+        \leavevmode%
+        \hbox{%
+
+        \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1ex,left]{white}
+                \raggedright \usebeamerfont{author in head/foot} ~~\textbf{\insertshorttitle{}}
+        \end{beamercolorbox}%
+%
+        \begin{beamercolorbox}[wd=.4\paperwidth,ht=2.5ex,dp=1ex,right]{section in head/foot}
+                \usebeamerfont{title in head/foot}\raggedright ~~\textbf{\insertauthor}
+        \end{beamercolorbox}%   
+
+		\begin{beamercolorbox}[wd=.1\paperwidth,ht=2.5ex,dp=1ex,right]{section in head/foot}             
+                \raggedleft \textbf{\insertframenumber{} / \inserttotalframenumber}\hspace*{2ex}
+        \end{beamercolorbox}}%
+%
+        \vskip0pt%
+}
+
+
+
+\captionsetup{labelformat=empty,labelsep=none,justification=justified,width=.75\textwidth,aboveskip=5pt}
+
+%na zacatku sekce obsah
+%\AtBeginSection[]
+%{
+%  \begin{frame}
+%    \tableofcontents[currentsection]
+%  \end{frame}
+%}
+
+\title[Implementace INSPIRE tématu Budovy] % (optional, only for long titles)
+{Implementace INSPIRE tématu Budovy}
+\subtitle{a rozšiřování XSD schémat\\ ~ \\ \includegraphics[scale=0.15]{obrazky/cuzk2.png}}
+\author[M.Med] % (optional, for multiple authors)
+{Ing. Michal Med}
+\date[INSPIRUJME SE... 2015]{INSPIRUJME SE... 2015}
+
+\begin{document}
+
+\begin{frame}[plain]
+\titlepage
+\end{frame}
+
+\begin{frame}[plain]
+\tableofcontents
+\end{frame}
+
+\addtobeamertemplate{frametitle}{}{%
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=north east,yshift=2pt,xshift=-10pt] at (current page.north east){\includegraphics[scale=0.08]{obrazky/cuzk2.png}};
+\end{tikzpicture}}
+
+
+\include{sections/chapter_1}% Analýza datové specifikace Budovy: aplikační schémata, XSD schémata, Datové sklady, Portrayal
+
+\include{sections/chapter_2}% Tvorba XSD schémata pro Budovy
+
+\include{sections/chapter_3}% Přístup k datům, WMS, WFS, předpřipravené soubory
+
+\frame[plain]{
+\huge{Díky za pozornost}
+\begin{center}
+\includegraphics[scale=0.6]{obrazky/otazky}
+\end{center}
+}
+
+\end{document}

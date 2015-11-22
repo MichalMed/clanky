@@ -1,0 +1,5 @@
+\beamer@endinputifotherversion {3.24pt}
+\select@language {czech}
+\beamer@sectionintoc {1}{Struktura a obsah datov\IeC {\'y}ch sad podle INSPIRE}{3}{0}{1}
+\beamer@sectionintoc {2}{Tvorba a roz\IeC {\v s}i\IeC {\v r}ov\IeC {\'a}n\IeC {\'\i } sch\IeC {\'e}mat XSD}{14}{0}{2}
+\beamer@sectionintoc {3}{Implementace a publikace}{22}{0}{3}

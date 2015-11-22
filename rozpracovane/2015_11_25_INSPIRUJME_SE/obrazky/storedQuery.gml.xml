@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FeatureCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:GN="urn:x-inspire:specification:gmlas:GeographicalNames:3.0" xmlns:base="urn:x-inspire:specification:gmlas:BaseTypes:3.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:CP="urn:x-inspire:specification:gmlas:CadastralParcels:3.0" xmlns:gmd="http://www.isotc211.org/2005/gmd" xsi:schemaLocation="http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/deprecatedTypes.xsd http://www.opengis.net/wfs/2.0 http://schemas.opengis.net/wfs/2.0/wfs.xsd urn:x-inspire:specification:gmlas:GeographicalNames:3.0 http://services.cuzk.cz/xsd/inspire/specification/3.0rc3/GeographicalNames.xsd urn:x-inspire:specification:gmlas:CadastralParcels:3.0 http://services.cuzk.cz/xsd/inspire/specification/3.0rc3/CadastralParcels.xsd" timeStamp="2014-01-28T20:28:15" numberMatched="1" numberReturned="1" xmlns="http://www.opengis.net/wfs/2.0">
+  <boundedBy>
+    <gml:Envelope srsName="urn:ogc:def:crs:EPSG::5514" srsDimension="2">
+      <gml:lowerCorner>-559730.53 -1115946.41</gml:lowerCorner>
+      <gml:upperCorner>-556696.35 -1113250.06</gml:upperCorner>
+    </gml:Envelope>
+  </boundedBy>
+  <member>
+    <CP:CadastralZoning gml:id="CZ.652342">
+      <CP:beginLifespanVersion>2013-11-26T17:20:05Z</CP:beginLifespanVersion>
+      <CP:geometry>
+        <gml:MultiSurface gml:id="S.CZ.652342" srsName="urn:ogc:def:crs:EPSG::5514" srsDimension="2">
+          <gml:surfaceMember>
+            <gml:Polygon gml:id="S.CZ.652342.1">
+              <gml:exterior>
+                <gml:LinearRing>
+                  <gml:posList>-557699.97 -1114134.81 -557897.01 -1113921.82 -557900.14 -1113918.44 -557907.17 -1113910.83 -557909.23 -1113908.61 -558111.13 -1113690.43 -558312.16 -1113472.9 -558516.65 -1113251.84 -558518.3 -1113250.06 -558642.91 -1113296.24 -558652.31 -1113299.84 -558706.23 -1113328.65 -558882.06 -1113423.96 -559033.92 -1113506.34 -559045 -1113512.35 -559073.83 -1113527.99 -559249.69 -1113623.35 -559379.83 -1113693.95 -559509.44 -1113764.26 -559510.04 -1113764.58 -559520.26 -1113770.14 -559524.54 -1113772.47 -559728.91 -1113883.54 -559730.53 -1113884.42 -559702.82 -1113926.69 -559694.12 -1113939.96 -559686.08 -1113952.23 -559678.65 -1113963.56 -559658.51 -1113994.3 -559640.9 -1114021.17 -559629.94 -1114037.89 -559628.68 -1114039.81 -559581.93 -1114110.27 -559537.94 -1114176.58 -559429.17 -1114341.65 -559320.4 -1114506.72 -559315.68 -1114513.89 -559314.2 -1114516.05 -559311.98 -1114519.3 -559311.13 -1114520.45 -559308.06 -1114524.59 -559306.67 -1114526.47 -559235.48 -1114633.64 -559164.3 -1114740.81 -559157 -1114751.8 -559142.48 -1114773.66 -559067.28 -1114886.88 -558992.08 -1115000.1 -558991.43 -1115001.07 -558990.59 -1115002.34 -558989.09 -1115004.59 -558970.52 -1115002.13 -558814.07 -1114981.39 -558649.67 -1114958.13 -558626.51 -1114954.85 -558626.84 -1114952.43 -558627.19 -1114949.8 -558622.49 -1114949.16 -558566.64 -1114941.64 -558523.18 -1114935.79 -558455.75 -1114926.72 -558404.92 -1114919.88 -558284.31 -1114903.64 -558283.74 -1114903.35 -558278.96 -1114900.94 -558277.99 -1114901.55 -558271.31 -1114905.78 -558271.09 -1114905.92 -558270.91 -1114906.21 -558267.46 -1114911.68 -558267.66 -1114912.4 -558241.59 -1114934.36 -558229.45 -1114943.58 -558183.25 -1114979.7 -558086.32 -1115055.42 -557943.2 -1115167.27 -557800.07 -1115279.11 -557656.95 -1115390.96 -557519.03 -1115498.73 -557514.31 -1115502.42 -557513.82 -1115502.8 -557479.22 -1115529.84 -557435.05 -1115556.23 -557344.64 -1115606.04 -557301.68 -1115630.39 -557222.6 -1115675.21 -557219.03 -1115678.72 -557291.43 -1115752.38 -557174.67 -1115838.77 -557031.74 -1115944.5 -557029.8 -1115946.41 -556969.91 -1115852.02 -556870.47 -1115695 -556824.9 -1115623.03 -556826.82 -1115621.61 -556830.85 -1115618.63 -556934.36 -1115542.02 -556875.25 -1115431.05 -556790.62 -1115272.2 -556696.35 -1115095.75 -556698.22 -1115093.96 -556832.78 -1114965.24 -556977.38 -1114826.82 -557121.8 -1114688.45 -557266.35 -1114550.05 -557410.88 -1114411.65 -557555.47 -1114273.18 -557699.97 -1114134.81</gml:posList>
+                </gml:LinearRing>
+              </gml:exterior>
+            </gml:Polygon>
+          </gml:surfaceMember>
+        </gml:MultiSurface>
+      </CP:geometry>
+      <CP:inspireId>
+        <base:Identifier>
+          <base:localId>CZ.652342</base:localId>
+          <base:namespace>CZ-00025712-CUZK_CP</base:namespace>
+        </base:Identifier>
+      </CP:inspireId>
+      <CP:label>Dubčany u Choliny</CP:label>
+      <CP:level>3</CP:level>
+      <CP:levelName>
+        <gmd:LocalisedCharacterString locale="en">Cadastral district</gmd:LocalisedCharacterString>
+      </CP:levelName>
+      <CP:levelName>
+        <gmd:LocalisedCharacterString locale="cs">Katastrální území</gmd:LocalisedCharacterString>
+      </CP:levelName>
+      <CP:name>
+        <GN:GeographicalName>
+          <GN:language>ces</GN:language>
+          <GN:nativeness>endonym</GN:nativeness>
+          <GN:nameStatus>official</GN:nameStatus>
+          <GN:sourceOfName>Český úřad zeměměřický a katastrální</GN:sourceOfName>
+          <GN:pronunciation xsi:nil="true" />
+          <GN:spelling>
+            <GN:SpellingOfName>
+              <GN:text>Dubčany u Choliny</GN:text>
+              <GN:script>Latn</GN:script>
+            </GN:SpellingOfName>
+          </GN:spelling>
+        </GN:GeographicalName>
+      </CP:name>
+      <CP:nationalCadastalZoningReference>652342</CP:nationalCadastalZoningReference>
+      <CP:originalMapScaleDenominator>1000</CP:originalMapScaleDenominator>
+      <CP:referencePoint>
+        <gml:Point gml:id="R.CZ.652342" srsName="urn:ogc:def:crs:EPSG::5514" srsDimension="2">
+          <gml:pos>-558397.16 -1114505.05</gml:pos>
+        </gml:Point>
+      </CP:referencePoint>
+    </CP:CadastralZoning>
+  </member>
+</FeatureCollection>
