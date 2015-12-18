@@ -7,48 +7,49 @@ A bad cross reference---entry "gwaga2013tofcme"
 refers to entry "conf/er/2013", which doesn't exist
 A bad cross reference---entry "naagps2013tcbros"
 refers to entry "conf/edoc/2013", which doesn't exist
+Warning--I didn't find a database entry for ""
 Warning--I didn't find a database entry for "conf/edoc/2013"
 Warning--I didn't find a database entry for "conf/er/2013"
 Warning--empty author in 2013sparql
-You've used 16 entries,
+You've used 17 entries,
             1791 wiz_defined-function locations,
-            560 strings with 7088 characters,
-and the built_in function-call counts, 4001 in all, are:
-= -- 348
-> -- 188
+            566 strings with 7181 characters,
+and the built_in function-call counts, 4119 in all, are:
+= -- 356
+> -- 192
 < -- 6
-+ -- 68
-- -- 52
-* -- 265
-:= -- 623
-add.period$ -- 53
-call.type$ -- 16
-change.case$ -- 13
++ -- 70
+- -- 53
+* -- 266
+:= -- 640
+add.period$ -- 55
+call.type$ -- 17
+change.case$ -- 14
 chr.to.int$ -- 0
-cite$ -- 17
-duplicate$ -- 196
-empty$ -- 399
-format.name$ -- 52
-if$ -- 921
+cite$ -- 18
+duplicate$ -- 201
+empty$ -- 417
+format.name$ -- 53
+if$ -- 949
 int.to.chr$ -- 0
-int.to.str$ -- 16
+int.to.str$ -- 17
 missing$ -- 17
-newline$ -- 83
-num.names$ -- 21
-pop$ -- 64
+newline$ -- 87
+num.names$ -- 22
+pop$ -- 71
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 87
+skip$ -- 91
 stack$ -- 0
 substring$ -- 197
-swap$ -- 56
+swap$ -- 57
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 35
-width$ -- 18
-write$ -- 182
+while$ -- 36
+width$ -- 19
+write$ -- 190
 (There were 2 error messages)

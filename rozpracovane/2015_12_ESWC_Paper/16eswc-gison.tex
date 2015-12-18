@@ -31,15 +31,17 @@ In this paper, we present a case study on ontology modeling of urban planning da
 
 \section{Introduction}
 
-Urban planning is a data-intensive domain encountering great interest of experts as well as of general public. Many data sources in urban planning are public by their nature, yet, different level of quality of the data sources, as well as their semantic heterogenity makes them difficult to interpret and exploit. Although ontologies for urban planning have been developed for over a decade (e.g. \cite{fonseca2000ontologies}, \cite{psyllidis2015ontology}), not much attention has been paid to the context-based knowledge representation. 
+Urban planning is a data-intensive domain encountering great interest of experts as well as of general public. Many data sources in urban planning are public by their nature, yet, different level of quality of the data sources, as well as their semantic heterogenity makes them difficult to interpret and exploit. Although ontologies for urban planning have been developed for over a decade (e.g. \cite{fonseca2000ontologies}, \cite{psyllidis2015ontology}), not much attention has been paid to the context-based knowledge representation in the domain. 
 
-We came accross the need of context-sensitive ontology-based integration model during our research project aimed at integrating and exploiting urban data sources of the Prague Institute of Planning and Development (IPR). The institute has tens of datasets, content of which is typically visualized by means of a GIS. However, the integration of their content is missing. It turns out that many generic terms, like \emph{building}, \emph{construction}, or \emph{house}, are understood differently by architects, civil engineers, urban planning experts as well as general public. These semantic discrepancies have significant impact on subsequent data usage including statistics. 
+We came accross the need of context-sensitive ontology-based integration model during our research project aimed at integrating and exploiting urban data sources of the Prague Institute of Planning and Development (IPR). The institute has tens of datasets, content of which is typically visualized by means of a GIS. However, the integration of their content is missing. It turns out that many generic terms, like \emph{building}, \emph{construction}, or \emph{house}, are understood differently by architects, civil engineers, urban planning experts as well as general public. These semantic discrepancies have significant impact on subsequent data usage including statistics. Also, even a technique that would provide a limited set of datasets that would be necessary to explore manually in order to evaluate given query is missing.
 
-Here we introduce a \emph{context-sensitive ontology-based model} of urban planning dataset integration. The model is based on the UFO ontology  \cite{guizzardi2005ontological} and its extensions by power types \cite{guizzardi2015powertypes}. The model is then formalized in an OWL~2 \cite{owl2-overview} ontology using SPARQL \cite{2013sparql}, resp. $SPARQL-DL^{NOT}$ \cite{Kremen:2012:EOQ:2607597.2607601} queries for distributed query formulation.
+Here we introduce a \emph{context-sensitive ontology-based model} of urban planning dataset integration. The model is based on the UFO ontology  \cite{guizzardi2005ontological} and its extensions by power types \cite{guizzardi2015powertypes}. The model is then formalized in an OWL~2 \cite{owl2-overview} ontology using SPARQL \cite{2013sparql}, resp. $SPARQL-DL^{NOT}$ \cite{Kremen:2012:EOQ:2607597.2607601} queries for distributed query formulation. The queries are discussed in terms of usability in the domain.
+
+Section \ref{sec:bkg} presents the most important notions used in the paper.
 
 % TODO paper organization
 
-\section{Background}
+\section{Background}\label{sec:bkg} 
 
 \subsection{Unified Foundational Ontology}
 
@@ -83,30 +85,29 @@ OntoUML is a language provided on top of UFO for the purpose of conceptual model
  
 \section{Urban Planning Ontology}\label{sec:ontology}
 
-
-The whole process of creating the ontology has begun in the February 2015 and can be separated in few phases. In the phase one, ontology designers became familiar with data published IPR and one of the authors, Michal Med, have studied papers, tutorials and articles on this topic. In the second phase, first ontology models based on the basic knowledge of data were created and consulted with data professionals employed by IPR. They have provided information and annotations of single datasets. Third phase of design started with dataset modelling and transforming created models into ontologies. Data are put in contexts and therefore, single ontologies for every context were created.
+The whole process of ontology modelling has been conducted for over ten months and can be separated in several phases. In the first phase, ontology designers became familiar with data published IPR and chose the adequate ontology modeling technique. In the second phase, ontology model prototypes based on the basic knowledge of data were created and consulted with data professionals employed by IPR. They have provided information and annotations of five thematically similar datasets. Third phase of design started with ontological modelling of datasets. Because of terminology ambiguities, most of the notions are contextualized Data are put in contexts and therefore, single ontologies for every context were created.
 
 % co jsme dostali od IPR,
 
 \subsection{Data analysis}\label{sec:analysis}
-Prague Institute of Planning and Development manages tens of datasets, publishing them as open data on their open data geoportal. Datasets contain data related to the city management, urban planning data, data about traffic, POIs and more. For the publication, standardised ATOM service \cite{} is used. All of data sets shall be provided with metadata according to the ISO 19115\cite{}. Data are discovered on the geoportal as well, by the keywords. Set of keywords, including names of spatial objects, their attributes and words used for searching data by users themselves, was provided by the Institute. The list contain more than 200 keywords with different meanings. Some of the concepts are used in various meanings, some concepts have the same meaning as another, e.g. \texttt{park and ride}, \texttt{Park \& ride} and \texttt{P + R}. Some concepts may have different meaning in different contexts, e.g. construction and building may have similar or same meaning in the context of the Land use dataset, but in the context of the Buildings dataset, building is a specialization\cite{} of a construction, i.e. every building is a construction and all properties of a construction are properties of a building as well. Moreover, concept of construction can be used in the meaning of a process or an object. Context differs among datasets, specific groups of users, object or attribute type and more.
+Prague Institute of Planning and Development manages tens of datasets, publishing them as open data on their open data geoportal. Datasets contain data related to the city management, urban planning data, data about traffic, POIs and more. For the publication, standardised ATOM service is used. All data sets shall be provided with metadata according to the ISO 19115\cite{ISO19115}. Data are discovered on the geoportal as well, by the keywords. Set of keywords, including names of spatial objects, their attributes and words used for searching data by users themselves, was provided by IPR. The list contains more than 200 keywords with different meanings. Some of the concepts are used in various meanings, some concepts have the same meaning as another, e.g. \texttt{park and ride}, \texttt{Park \& ride} and \texttt{P + R}. Some concepts may have different meaning in different contexts, e.g. \emph{construction} and \emph{building} may have similar or same meaning in the context of the Land use dataset, but in the context of the Buildings dataset, \emph{building} is a specialization\cite{} of a \emph{construction}, i.e. every \emph{building} is a \emph{construction} and all properties of a \emph{construction} are properties of a \emph{building} as well. Moreover, concept of \emph{construction} can be used in the meaning of a process or an object. Context differs among datasets, specific groups of users, object or attribute type and more.
 
 % první zpracování modelů,
-First task was to sort concepts, find one common theme and try to find relations between concepts related to the chosen theme. According to the first look on the set of concept, traffic seemed to be suitable theme to start with. First conceptual model was created on the basis of railway traffic. For the first model, mainly specializations were used and only few object properties. Fourteen concepts related to the railway were derived from the set and the contexts and relations were searched for among them. For example, concepts railway, road and rail crossing are definitely somehow related (see Figure. Relations between objects are ambiguous and for the person without any knowledge and expectations, it is quite difficult to discover such ambiguities. In the example above, crossing may be part of railway, but also, it may be the part of road. Road and railway may touch, but their connection may be done only in crossing. In some cases, railway could have been removed, but crossing is still on its place. Inexperienced mind also tends to think about same objects in different meanings in different situations. It was proved, that the most important thing is to define exact meaning for every concept and document it as an annotation, and then count every meaning as one object. Therefore it is very important to have at least common knowledge of the topic, that is described by the model. 
+First task was to sort concepts, find one common theme and try to find relations between concepts related to the chosen theme. According to the first look on the set of concept, traffic seemed to be suitable theme to start with. First conceptual model was created on the basis of railway traffic. For the first model, mainly specializations were used and only few object properties. Fourteen concepts related to the railway were derived from the set and the contexts and relations were searched for among them. For example, concepts \emph{railway}, \emph{road} and \emph{rail crossing} are definitely somehow related. Relations between objects are ambiguous and for the person without any knowledge and expectations, it is quite difficult to discover such ambiguities. In the example above, \emph{crossing} may be part of \emph{railway}, but also, it may be the part of \emph{road}. \emph{Road} and \emph{railway} may touch, but their connection may be done only in \emph{crossing}. In some cases, \emph{railway} could have been removed, but \emph{crossing} is still on its place. Inexperienced mind also tends to think about same objects in different meanings in different situations. It was proved that the most important thing is to capture meanings for every concept properly and document it (by means of an OWL annotation), and then count every meaning as one object. Therefore it is very important to have at least common knowledge of the topic that is described by the model. 
 
 \begin{figure}
  \includegraphics[width=1.0\textwidth]{images/znalostniModel.png}
  \caption{The first semantic model of the ontology created over urban planning data.}\label{fig:model_june}
 \end{figure}
 
-Employees of IPR are experts in the field of urban planning, not traffic. It is really important advantage to have an opportunity of consulting the model with its future users with deep knowledge of the issue. Moreover, the model of traffic in Prague is not so very interesting for further querying, because it is not enough connected to the other datasets. The issue of urban planning is still quite wide for the simple basic model. Therefore the issue was focused on the issue of housing.
+The analysis of railway traffic was performed in order to become familiar with the domain and setup basic notions for urban planning. In the next steps we extended the model of traffic in Prague with more interlinked data in order to test the potential to answer distributed queries. The issue of urban planning is still quite wide for the basic model. For this purpose the domain of \emph{housing} was selected by domain experts from IPR.
 
 \subsection{Ontology modelling}\label{sec:modelling}
 % přechod na modely územního plánování, 
 
-The first model of urban planning ontology was designed from below to the top -- first, basic concepts for the housing issue were derived from the set into the new ontology. Second step was to find and mark relations between objects in the model and important relations heading out of the existing model. Relations and outer objects were added to the model. Besides specializations, object properties starting to be more important in the conceptual model of housing (see Figure \ref{fig:model_june}). Still, every object can be seen in various roles depending on the context. At this stage, this kind of problem was solved by splitting object in two according to its meaning.
+The first model of urban planning ontology was designed from bottom to the top -- first, basic concepts for the housing issue were derived from the set into the new ontology. Second step was to find and mark relations between objects in the model and important relations heading out of the existing model. Relations and outer objects were added to the model. Besides specializations, object properties starting to be more important in the conceptual model of housing (see Figure \ref{fig:model_june}). Still, every object can be seen in various roles depending on the context. At this stage, the crucial problem was to correctly define meanings (concepts) for different terms in different contexts.
 
-Very important input to the model came from IPR, because the meaning of some concepts were misunderstood. Good example can be the word ``real estate'', having different meaning in the context of various groups of users. For urban planners it is used as unmovable object, including flats, for brokers it is building or ground, but also a flat or even movable objects such as residential caravans, and from the perspective of an employee of the cadastral office, building may be a part of ground and some juridical relations are considered real estates. These records had to be set straight.
+Very important input to the model came from IPR, because the meaning of some concepts were misunderstood. Good example can be the word \emph{real estate}, having different meaning in the context of various groups of users -- for urban planners it is used as \emph{unmovable object, including flats}, for brokers it is \emph{a building or ground, but also a flat or even movable objects such as residential caravans}, and from the perspective of an employee of the cadastral office, \emph{building may be a part of ground and some juridical relations are considered real estates}. These records had to be set straight.
 
 % využití a popis datových sad, včetně obrázků modelů,
 
@@ -123,7 +124,7 @@ At this stage of work, design split into integrated thematic units. Ontology was
  \item[Functional land use] is a dataset, that is part of spatial plan, containing data describing designed functional land use,
  \item[Parcels] is a dataset containing data about cadastral parcels.
 \end{description}
-For each dataset, visual model of relations and involved classes was created. The result is in Figures \ref{fig:dat_buil}, \ref{fig:dat_flo}, \ref{fig:dat_clu}, \ref{fig:dat_fua} and \ref{fig:dat_par}. In the models, red classes are information--bearing objects, most important for the theme. Orange classes are straight related to the topic and have direct relations to the information--bearing object. Yellow classes are important for the querying, identifying objects indirectly related to the information--bearing topic with possible relation to other datasets. Green box with title ``Data'' indicates, that class leading to it contains attributes. These attributes are represented as individuals with value as data property.
+For each dataset, visual model of relations and involved classes was created. The result is in Figures \ref{fig:dat_buil}, \ref{fig:dat_flo}, \ref{fig:dat_clu}, \ref{fig:dat_fua} and \ref{fig:dat_par}. In the models, the darkness of the class is proportional to the importance of the concept w.r.t. the particular dataset.
 
 \subsubsection{Buildings}
 
@@ -163,7 +164,6 @@ Building object also carry information about lifespan and publisher.
  \includegraphics[width=1.0\textwidth]{images/SSVU.png}
  \caption{Model of current land use relative obects and their properties.}\label{fig:dat_clu}
 \end{figure}
-
 
 Information--bearing object is an area. Objects in the context of this datasets carries information about the real land use. It may differ from the planed or purposed land use. Context covers really lot of objects, because current land use is influenced by lot of aspects.
 
@@ -229,27 +229,55 @@ For the purposes of this work, context is represented by datasets. For every dat
  \caption{Summary of dataset ontologies and relations among them.}\label{fig:ontologies_summary}
 \end{figure}
 
-Context itself is defined as a class in the \textit{common} ontology.
+Context itself is defined as a class in the \textit{common} ontology as a specialization of information object. Possibility of adding new types of context in the future remains open, therefore  the structure of information objects remains more branched, than needed on the first sight.
 
-% přidání kontextu (datasetů, užití) -- přišlo se na to, že některé property mají smysl pouze v určitém kontextu -- celý dataset oanotovat
-
-% rozdělení na více ontologií a jejich popis
-
-% common, all a appendix
-
-\section{Practical Queries and Evaluation}
+\section{Practical Queries and Evaluation}\label{sec:eval}
 
 % uvaha o dotazopvaci strukture (obrázek schématu)
-
+The purpose of ontology model is to get rich linked information from the datasets. One of the proposed targets is creation of a querying mechanism over the IPR datasets on their geoportal. Their idea is querying mechanism, that returns not only exact matches, but rates related responses and returns matches, that may have something in common. Problem of browsing data by users is, by the words of IPR, that users do not know, what exactly do they expect. It is quite import to know, what kind of queries IPR expects to be asked. They have provided us with following examples:
+\begin{enumerate}
+\item What areas shall be used for housing according to the spatial plan, but their current use is different and are owned by municipality?
+\item In which areas lie apartment houses taller than four floors?
+\item How many percent of the floor area in the Old Town is used for housing?
+\item How many family houses are in Uh{\v r}{\' i}n{\v e}ves?
+\item Which office buildings have no parks in their neighbourhood?
+\item What is the floor area of all office buildings in Prague?
+\item Which gas stations lie in areas, where no gas stations shall lie?
+\item In which municipal areas are tenement houses?
+\item Which buildings in proximity of given point are owned by public subjects and are able to be used for the building of new library?
+\end{enumerate}
+\begin{figure}
+ \includegraphics[width=1.0\textwidth]{images/querying.png}
+ \caption{Process of asking question over the ontology and datasets.}\label{fig:querying}
+\end{figure}
+All of these questions are quite complex and lot of them may be answered in different ways. All of these questions are querying data itself. Data are not part of ontology model. Moreover, some concepts are not clear in its meaning, e.g. Uh{\v r}{\' i}n{\v e}ves can be a name of part of municipality or cadastral zoning. Another question is on the meaning of words like ``neighbourhood'', ``shall'', ``used for'' and similar. Good example of many meanings in one question is number eight: In which municipal areas are tenement houses? Municipal area may be administrative unit of municipality, but it also may be an area inside municipality or area of parcels, on which is urban area. Second part of the question is problematic as well. Answer may refer to houses with the type ``tenement'', or houses in areas with attribute ``used for tenement''. Each question shall be divided into elements and for this elements context (or more possible contexts) shall be found. For the search, ontology querying shall be used.
 % dotazy na strukturu a kontext -- SparQL
 
-% dotazy na konrétní data 
+For the querying the context and structure of contents used in question is used SparQL language. Queries are applied upon the \textit{all} ontology, that contain all information about datasets, including context. Questions above could be split into set of SparQL queries defining context and datasets, where to look for information. The result of SparQL shall be the set of datasets and classes in specific context, relevant for finding the answer on asked question.
 
-% převod konkrétního dotazu na SparQL
+Basic set of SparQL queries shall provide answer on following questions:
+\begin{enumerate}
+\item in which datasets can be found given concept?
+\item in which context is concept used over the set of datasets? 
+\item in which dataset can be given found attribute value?
+\item what properties are there between two concepts in a given set of datasets?
+\item which datasets contain information needed to answer question on specific data?
+\end{enumerate}
 
-% zjištění kontextu konkrétního dotazu
+As seen before, first four questions are basically subsets of the fifth. Question number five is the most important question and in the practical use it shall be used for searching context for further SQL query focused on direct access to data. 
+
+The process of querying proceeds as follows (see Figure \ref{fig:querying}):
+\begin{enumerate}
+\item User asks a question on the IPR geoportal (that will be probably provided by the third party of the project, private company Gisat), 
+\item question is split into parts,
+\item context of single parts is queried by SparQL queries,
+\item output for the queries is usage and meaning of concepts in proposed context, including datasets and their structures, where specific data can be found,
+\item based on the context, SQL queries are created and commited (this will be provided by Gisat).
+\end{enumerate}
 
 \section{Conclusions}
+
+In the first year of project, most of the work was done on the ontological models. In the beginning, it was important to get used to the structure and meaning of data and nomenclature used in the field of urban planning. After the first tries of creating ontologies, few specifics were found. It is very important to not underestimate annotations of classes and properties. As the time passes and the number of concepts raises, more and more properties depends on context. 
 
 \subsubsection*{Acknowledgements}\label{sec:ack}
 \noindent This work was supported by the grant No. TA04021499 ``Open Data and semantic approaches to uncover social aspects of urban quality'' of the Technology Agency of the Czech Republic.
