@@ -1,0 +1,118 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\providecommand{\eprint}[2][]{\url{#2}}
+\makeatletter
+\def\bibdoi{\begingroup\def\do##1{\catcode
+  `##112\relax}\do$\do\\\do\_\do\%\do\^\expandafter\endgroup\@bibdoi}
+\def\@bibdoi#1{\href{http://dx.doi.org/#1}{\textsc{doi}:#1}}
+\makeatother
+
+\bibitem{KOVIN}
+CENIA.
+\newblock Kovin | inspire, 2015.
+\newblock Accessed: 2015-12-08, \eprint{http://inspire.gov.cz/kovin}.
+
+\bibitem{strategie}
+K.~v{\' y}bor~pro INSPIRE.
+\newblock Strategie implementace inspire, 2015.
+\newblock \eprint{http://inspire.gov.cz/sites/default/files/documents/Strategie
+  ImplementaceINSPIRE.pdf}.
+
+\bibitem{XSD}
+W3C.
+\newblock W3c xml schema definition language (xsd) 1.1 part 1:structures, 2012.
+\newblock \eprint{http://www.w3.org/TR/xmlschema11-1/}.
+
+\bibitem{INSPIRE:DSBU}
+I.~T. W.~G. Buildings.
+\newblock \textit{D2.8.III.2 INSPIRE Data Specificationin on Buildings --
+  Technical Guidelines}, 3rd edn., 2013.
+\newblock
+  \eprint{http://inspire.ec.europa.eu/documents/Data_Specifications/INSPIRE_DataSpecification_BU_v3.0.pdf}.
+
+\bibitem{OGC:GML}
+C.~Portele.
+\newblock \textit{Geography Markup Language Encoding Standard}.
+\newblock Open Geospatial Consortium Inc., 3rd edn., 2007.
+\newblock \eprint{http://opengeospatial.org/files/?artifact_id=20509}.
+
+\bibitem{INSPIRE:NS}
+E.~Commission.
+\newblock Network services.
+\newblock Accessed: 2015-12-08,
+  \eprint{http://inspire.ec.europa.eu/index.cfm/pageid/5}.
+
+\bibitem{Med15:230877}
+M.~Med.
+\newblock {Pozad{\'\i} tvorby datov{\' y}ch sad v souladu se sm{\v e}rnic{\'\i}
+  INSPIRE na {\v C}{\' U}ZK}.
+\newblock \textit{Geodetick{\' y} a kartografick{\' y} obzor}
+  \textbf{61(103)}(5):94--100, 2015.
+\newblock
+  \eprint{http://egako.eu/wp-content/uploads/2015/05/gako_2015_051.pdf}.
+
+\bibitem{INSPIRE:DLS}
+I.~O. C. T.~F. for Network~Services.
+\newblock \textit{Technical Guidance for the implementation of INSPIRE Download
+  Services}, 3rd edn., 2013.
+\newblock
+  \eprint{http://inspire.ec.europa.eu/documents/Network_Services/Technical_Guidance_Download_Services_v3.1.pdf}.
+
+\bibitem{OGC:WFS}
+P.~P.~A. Vretanos.
+\newblock \textit{OpenGIS Web Feature Service 2.0 Interface Standard}.
+\newblock Open Geospatial Consortium Inc., 2nd edn., 2010.
+\newblock \eprint{http://opengeospatial.org/files/?artifact_id=39967}.
+
+\bibitem{Horak:geoinformatics10}
+A.~J. Hor{\' a}k~Ji{\v r}{\' i}, R{\r u}zicka~Jan.
+\newblock Performance testing of download services of cosmc.
+\newblock \textit{Geoinformatics FCE CTU} \textbf{10}:5--14, 2013.
+\newblock \bibdoi{10.14311/gi.10.1}.
+
+\bibitem{OGC:WMS}
+J.~de~la Beaujardiere.
+\newblock \textit{OpenGIS Web Map Server Implementation Specification}.
+\newblock Open Geospatial Consortium Inc., 1st edn., 2006.
+\newblock \eprint{http://opengeospatial.org/files/?artifact_id=14416}.
+
+\bibitem{INSPIRE:MD}
+D.~T. Metadata, E.~C. J.~R. Center.
+\newblock \textit{INSPIRE Metadata Implementing Rules:Technical Guidelines
+  based on EN ISO 19115 and EN ISO 19119}, 1st edn., 2013.
+\newblock
+  \eprint{http://inspire.ec.europa.eu/documents/Metadata/MD_IR_and_ISO_20131029.pdf}.
+
+\bibitem{Ruzicka:geoinformatics3}
+J.~R{\r u}zicka.
+\newblock Iso 19115 for geoweb services orchestration.
+\newblock \textit{Geoinformatics FCE CTU} \textbf{3}:51--66, 2008.
+\newblock \bibdoi{10.14311/gi.3.5}.
+
+\bibitem{INSPIRE:GP}
+E.~Commission.
+\newblock Inspire geoportal.
+\newblock Accessed: 2015-12-08,
+  \eprint{http://inspire-geoportal.ec.europa.eu/}.
+
+\bibitem{Med13:Geoinformatics11}
+M.~Med, P.~Sou{\v c}ek.
+\newblock Development and testing of inspire themes addresses (ad) and
+  aministrative units (au) managed by cosmc.
+\newblock \textit{Geoinformatics FCE CTU} \textbf{11}:77--83, 2013.
+\newblock \bibdoi{10.14311/gi.11.6}.
+
+\bibitem{Tryhubova13:geoinformatics1}
+T.~Pavla.
+\newblock Evropsk{\' a} sm{\v e}rnice inspire.
+\newblock \textit{Geoinformatics FCE CTU} \textbf{1}:176--183, 2006.
+\newblock \bibdoi{10.14311/gi.1.20}.
+
+\bibitem{Polacek:geoinformatics8}
+J.~Pol{\'a}{\v c}ek, P.~Sou{\v c}ek.
+\newblock Implementing inspire for the czech cadastre of real estates.
+\newblock \textit{Geoinformatics FCE CTU} \textbf{8}:9--16, 2012.
+\newblock \bibdoi{10.14311/gi.8.1}.
+
+\end{thebibliography}

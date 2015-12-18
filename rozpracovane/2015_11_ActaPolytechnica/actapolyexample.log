@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.10.20)  6 DEC 2015 18:09
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.10.20)  9 DEC 2015 11:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -611,14 +611,7 @@ LaTeX Font Info:    Try loading font information for T1+lmss on input line 1326
 
 (/usr/share/texmf/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)) (./actapolyexample.aux
-
-LaTeX Warning: Label `fig:feature_catalogue' multiply defined.
-
-
-LaTeX Warning: Label `fig:feature_catalogue' multiply defined.
-
-)
+)) (./actapolyexample.aux)
 \openout1 = `actapolyexample.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
@@ -635,7 +628,8 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 3.
- (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 3.
@@ -824,7 +818,7 @@ Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/13'.
 (microtype)             Ignoring protrusion settings for this character.
 
-<pics/inspire_logo.png, id=72, 281.05pt x 286.06876pt>
+<pics/inspire_logo.png, id=60, 281.05pt x 286.06876pt>
 File: pics/inspire_logo.png Graphic file (type png)
 
 <use pics/inspire_logo.png>
@@ -834,57 +828,35 @@ Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/9'.
 (microtype)             Ignoring protrusion settings for this character.
 
-
-Package natbib Warning: Citation `KOVIN - http://inspire.gov.cz/kovin' on page 
-1 undefined on input line 41.
-
-<pics/feature_catalogue.png, id=74, 623.32875pt x 404.51125pt>
+<pics/feature_catalogue.png, id=63, 623.32875pt x 404.51125pt>
 File: pics/feature_catalogue.png Graphic file (type png)
 
 <use pics/feature_catalogue.png>
 Package pdftex.def Info: pics/feature_catalogue.png used on input line 45.
 (pdftex.def)             Requested size: 385.5027pt x 250.17714pt.
-
-
-Package natbib Warning: Citation `strategie - http://inspire.gov.cz/sites/defau
-lt/files/documents/Strategie ImplementaceINSPIRE.pdf' on page 1 undefined on in
-put line 51.
-
 LaTeX Font Info:    Try loading font information for TS1+lmr on input line 54.
-(/usr/share/texmf/tex/latex/lm/ts1lmr.fd
+ (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package microtype Info: Loading generic settings for font family
 (microtype)             `lmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
- <./pics/inspire_logo.png>]
-
-Package natbib Warning: Citation `XSD - http://www.w3.org/TR/xmlschema11-1/' on
- page 2 undefined on input line 60.
-
-<pics/BU_schemas.pdf, id=96, 449.5194pt x 180.675pt>
+ <./pics/inspire_logo.png>] <pics/BU_schemas.pdf, id=88, 449.5194pt x 180.675pt
+>
 File: pics/BU_schemas.pdf Graphic file (type pdf)
- <use pics/BU_schemas.pdf>
+
+<use pics/BU_schemas.pdf>
 Package pdftex.def Info: pics/BU_schemas.pdf used on input line 64.
 (pdftex.def)             Requested size: 385.5027pt x 154.95013pt.
-
-
-Package natbib Warning: Citation `Data Specification on Buildings v3.0 - http:/
-/inspire.ec.europa.eu/documents/Data_Specifications/INSPIRE_DataSpecification_B
-U_v3.0.pdf' on page 2 undefined on input line 70.
-
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/11'.
 (microtype)             Ignoring protrusion settings for this character.
-
-LaTeX Warning: Reference `fig:application_schemas' on page 2 undefined on input
- line 75.
-
-[2 <./pics/feature_catalogue.png>]
+ [2 <./pics/feature_catalogue.png>]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 77.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -892,15 +864,11 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 77.
 
-<pics/bu_wms.png, id=105, 469.755pt x 249.93375pt>
+<pics/bu_wms.png, id=101, 469.755pt x 249.93375pt>
 File: pics/bu_wms.png Graphic file (type png)
  <use pics/bu_wms.png>
 Package pdftex.def Info: pics/bu_wms.png used on input line 81.
 (pdftex.def)             Requested size: 385.5027pt x 205.10716pt.
-
-
-Package natbib Warning: Citation `OGC -- http://www.opengeospatial.org' on page
- 3 undefined on input line 89.
 
 [3 <./pics/BU_schemas.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 91--92
@@ -923,103 +891,73 @@ Overfull \hbox (17.14485pt too wide) in paragraph at lines 100--109
  [][] 
  []
 
-
-Package natbib Warning: Citation `Data SPceification ON Buildings -- http://ins
-pire.ec.europa.eu/documents/Data_Specifications/INSPIRE_DataSpecification_BU_v3
-.0.pdf' on page 4 undefined on input line 113.
-
-<pics/Buildings.png, id=124, 658.46pt x 362.35374pt>
+<pics/Buildings.png, id=123, 658.46pt x 362.35374pt>
 File: pics/Buildings.png Graphic file (type png)
  <use pics/Buildings.png>
 Package pdftex.def Info: pics/Buildings.png used on input line 117.
 (pdftex.def)             Requested size: 385.5027pt x 212.15025pt.
 
 [4 <./pics/bu_wms.png (PNG copy)>]
-
-Package natbib Warning: Citation `XSD - http://www.w3.org/TR/xmlschema11-1/' on
- page 5 undefined on input line 131.
-
-<pics/BU_dedicnost_info.png, id=138, 758.835pt x 264.99pt>
+<pics/BU_dedicnost_info.png, id=139, 758.835pt x 264.99pt>
 File: pics/BU_dedicnost_info.png Graphic file (type png)
 
 <use pics/BU_dedicnost_info.png>
 Package pdftex.def Info: pics/BU_dedicnost_info.png used on input line 142.
 (pdftex.def)             Requested size: 385.5027pt x 134.6215pt.
  [5 <./pics/Buildings.png>]
-
-LaTeX Warning: Reference `fig:bu_building_element_oxy' on page 6 undefined on i
-nput line 150.
-
-<pics/BU_PUBL_DB.pdf, id=146, 1063.17195pt x 690.58pt>
+<pics/BU_PUBL_DB.pdf, id=149, 1063.17195pt x 690.58pt>
 File: pics/BU_PUBL_DB.pdf Graphic file (type pdf)
 
 <use pics/BU_PUBL_DB.pdf>
-Package pdftex.def Info: pics/BU_PUBL_DB.pdf used on input line 166.
+Package pdftex.def Info: pics/BU_PUBL_DB.pdf used on input line 161.
 (pdftex.def)             Requested size: 385.5027pt x 250.39996pt.
  [6 <./pics/BU_dedicnost_info.png (PNG copy)>]
+<pics/transformace.png, id=161, 539.76656pt x 350.05782pt>
+File: pics/transformace.png Graphic file (type png)
+
+<use pics/transformace.png>
+Package pdftex.def Info: pics/transformace.png used on input line 176.
+(pdftex.def)             Requested size: 184.07883pt x 119.38129pt.
+ [7 <./pics/BU_PUBL_DB.pdf> <./pics/transformace.png>] [8] (./actapolyexample.b
+bl
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 262.
-
-[7 <./pics/BU_PUBL_DB.pdf>]
-
-LaTeX Warning: Reference `tab:wide' on page 8 undefined on input line 303.
-
-
-LaTeX Warning: Reference `fig:gr_a' on page 8 undefined on input line 303.
-
-
-Package natbib Warning: Citation `doi' on page 8 undefined on input line 340.
-
-No file actapolyexample.bbl.
-
+(Font)              <9> on input line 14.
+) 
 AED: lastpage setting LastPage
-[8]
-
-Package natbib Warning: There were undefined citations.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 362.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 362.
-(./actapolyexample.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 362.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 362.
+[9]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 226.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 226.
+ (./actapolyexample.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 226.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 226.
 Package rerunfilecheck Info: File `actapolyexample.out' has not changed.
-(rerunfilecheck)             Checksum: E55999E3B65950E06469E0458C7658C8;1199.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 362.
+(rerunfilecheck)             Checksum: 0A93AAB2F7B9CECE76125F50DE92AA09;930.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 226.
  ) 
 Here is how much of TeX's memory you used:
- 13045 strings out of 494985
- 198114 string characters out of 6180355
- 341892 words of memory out of 5000000
- 15769 multiletter control sequences out of 15000+600000
- 137695 words of font info for 180 fonts, out of 8000000 for 9000
+ 13099 strings out of 494985
+ 198901 string characters out of 6180355
+ 342432 words of memory out of 5000000
+ 15801 multiletter control sequences out of 15000+600000
+ 128517 words of font info for 183 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 43i,15n,45p,2454b,611s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/s
-hare/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
--ts1.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/f
-onts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx9.p
-fb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/
-type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi9.pfb></
-usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/p
-ublic/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/
-texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/
-lmri9.pfb></usr/share/texmf/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf/f
-onts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6
-.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texmf/fonts/
-type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on actapolyexample.pdf (8 pages, 811495 bytes).
+ 43i,14n,45p,2454b,426s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
+ips/lm/lm-ts1.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/shar
+e/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/l
+m/lmbx9.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/tex
+mf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6
+.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/t
+ype1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/
+share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/publ
+ic/lm/lmri9.pfb></usr/share/texmf/fonts/type1/public/lm/lmss8.pfb></usr/share/t
+exmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm
+/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on actapolyexample.pdf (9 pages, 969976 bytes).
 PDF statistics:
- 269 PDF objects out of 1000 (max. 8388607)
- 224 compressed objects within 3 object streams
- 41 named destinations out of 1000 (max. 500000)
- 46764 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 307 PDF objects out of 1000 (max. 8388607)
+ 262 compressed objects within 3 object streams
+ 51 named destinations out of 1000 (max. 500000)
+ 44185 words of extra memory for PDF output out of 51595 (max. 10000000)
 

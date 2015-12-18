@@ -107,7 +107,7 @@ examples for the demonstration of `actapoly' bibliography style.
   volume = {1},
   pages = {176-183},
   ISSN = {1802-2669},
-  doi = {10.14311/gi.1.20}
+  doi = {http://dx.doi.org/10.14311/gi.1.20}
 }
 
 @article{Polacek:geoinformatics8,
@@ -118,7 +118,7 @@ examples for the demonstration of `actapoly' bibliography style.
   volume = {8},
   pages = {9-16},
   ISSN = {1802-2669},
-  doi = {10.14311/gi.8.1}
+  doi = {http://dx.doi.org/10.14311/gi.8.1}
 }
 
 @article{Horak:geoinformatics10,
@@ -129,7 +129,7 @@ examples for the demonstration of `actapoly' bibliography style.
   volume = {10},
   pages = {5-14},
   ISSN = {1802-2669},
-  doi = {10.14311/gi.10.1}
+  doi = {http://dx.doi.org/10.14311/gi.10.1}
 }
 
 @article{Ruzicka:geoinformatics3,
@@ -140,7 +140,7 @@ examples for the demonstration of `actapoly' bibliography style.
   volume = {3},
   pages = {51-66},
   ISSN = {1802-2669},
-  doi = {10.14311/gi.3.5}
+  doi = {http://dx.doi.org/10.14311/gi.3.5}
 }
 
 ---------------------------------------------------------------------------------------------
@@ -207,7 +207,7 @@ examples for the demonstration of `actapoly' bibliography style.
   volume = {11},
   pages = {77-83},
   ISSN = {1802-2669},
-  doi = {10.14311/gi.11.6}
+  doi = {http://dx.doi.org/10.14311/gi.11.6}
 }
 
 
